@@ -15,12 +15,13 @@ public class LoginFilter implements Filter {
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        //System.out.println(request.getServletPath());
+        //System.out.println(request.getScheme() + "://" + request.getServerName() + ":" + 	request.getServerPort() + request.getContextPath() + "/");
+
         //获取uri
         String path = request.getServletPath();
 
         //获取session
-        User user = (User) request.getSession(false).getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
 
         //System.out.println("/login.jsp".equals(path));
         //判断

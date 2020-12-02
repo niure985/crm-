@@ -7,10 +7,10 @@
     <!--设置别名-->
     <typeAliases>
         <!--name是实体类所在的包名-->
-        <package name="top.hr37.setting.domain"/>
+        <package name="top.hr37.setting.domain,top.hr37.workbench.domain"/>
     </typeAliases>
 
     <mappers>
-        <package name="top.hr37.setting.dao"/>
+        <package name="top.hr37.setting.dao,top.hr37.workbench.dao"/>
     </mappers>
 </configuration>

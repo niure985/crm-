@@ -13,6 +13,10 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 	<script type="text/javascript">
 		$(function () {
 
+			if(window.top != window){
+				window.top.location = window.location;
+			}
+
 			//在页面加载完毕后，将用户文本框清空
 			$("#loginAct").val("");
 
